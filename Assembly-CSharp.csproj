@@ -63,6 +63,13 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Script\Mover.cs" />
+    <Compile Include="Assets\Script\Follow Camera.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Import Assets\GDTV EN\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
+    <None Include="Assets\Import Assets\TerrainSampleAssets\ThirdPartyNotices.txt" />
+    <None Include="Assets\Import Assets\TerrainSampleAssets\ShaderGraphs\CustomFunctions\CustomLighting.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1055,18 +1062,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.csproj">
-      <Project>{69D618F9-A5CE-2FAD-7BA8-02FF724A5C12}</Project>
-      <Name>Unity.RenderPipelines.Universal.2D.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.csproj">
-      <Project>{5307A1F2-186D-EEB9-3428-88D9A99B125C}</Project>
-      <Name>Unity.RenderPipelines.Universal.Config.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{65785F2C-ED0A-EA93-A245-CECE88950E15}</Project>
-      <Name>Unity.RenderPipelines.Universal.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
       <Project>{613A6380-B6AD-98BD-B652-32F37FFA1F1A}</Project>
       <Name>Unity.InputSystem.ForUI</Name>
@@ -1083,37 +1078,13 @@
       <Project>{9E290DEF-F9B6-C0AC-EAC9-B732B8057D79}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Collections.Editor.csproj">
-      <Project>{8158B05B-FE0B-D46C-515D-FF9B3B2277F6}</Project>
-      <Name>Unity.Collections.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.csproj">
       <Project>{41391E16-0893-B523-563C-FEFAB28AFC19}</Project>
       <Name>Unity.AI.Navigation</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{7DF66C5A-3AB9-6603-EC9E-BDB5DF378B28}</Project>
-      <Name>Unity.VisualScripting.Shared.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{98BEDC4F-829D-CCB7-2677-67671DBB6416}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Multiplayer.Center.Common.csproj">
-      <Project>{0C095753-83B7-2486-BD60-60E84EE75B63}</Project>
-      <Name>Unity.Multiplayer.Center.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
-      <Project>{0FC8D9C2-92E8-0EBC-7BFD-0958C7A38261}</Project>
-      <Name>Unity.AI.Navigation.Updater</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{3D7B0AC7-B090-0D76-182E-EEA861D0B49A}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{68E46871-67D2-5C0A-6E96-9A58668FCF06}</Project>
-      <Name>Unity.VisualScripting.Flow.Editor</Name>
+    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
+      <Project>{EDA019FB-CBC5-88AC-1303-30424E4DE16A}</Project>
+      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
       <Project>{872CD18A-F41C-ABFC-5680-BE8A5A1178CB}</Project>
@@ -1123,9 +1094,9 @@
       <Project>{2829D10A-3093-8213-1C2D-03DAA7A78626}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{2D931A3F-22ED-2052-B5F0-7CD14D2C333C}</Project>
-      <Name>Unity.TextMeshPro</Name>
+    <ProjectReference Include="Unity.Cinemachine.Editor.csproj">
+      <Project>{13E6F6D6-8922-B7F6-D2A1-8BA5F73B80DE}</Project>
+      <Name>Unity.Cinemachine.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Shared.csproj">
       <Project>{1A5BD522-CAD7-A4E6-9026-22B0D2BA6905}</Project>
@@ -1143,6 +1114,118 @@
       <Project>{A0CF3502-BF3F-95D4-29F2-D060820367F0}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.Shared.csproj">
+      <Project>{2D16E727-AC3A-2656-DA92-4C66CA118D76}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{101FC173-6F42-28E0-4BEA-947B634FF26B}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{87BD7C35-209E-87A1-E788-FFEE94344114}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{1E241A10-E8C6-0CC9-390C-E5907A54E47D}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj">
+      <Project>{7B526E90-9A21-A26A-E804-1106E73FED26}</Project>
+      <Name>Unity.Multiplayer.Center.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Splines.csproj">
+      <Project>{D5FC583C-BB8E-5B98-4CE2-3CADE1403CD5}</Project>
+      <Name>Unity.Splines</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{F1ED7D66-AED5-97B9-2C42-1DEDE6095BB9}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj">
+      <Project>{961ABAA5-BCA9-7932-C403-5A1E50F146E5}</Project>
+      <Name>Unity.RenderPipelines.GPUDriven.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Cinemachine.csproj">
+      <Project>{60DD42D6-DB3B-01F8-D6A6-06974941D997}</Project>
+      <Name>Unity.Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.csproj">
+      <Project>{429DE10A-5890-B4BA-7CF3-47B9BABFD2BE}</Project>
+      <Name>Unity.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="PPv2URPConverters.csproj">
+      <Project>{02D6ACF9-EF02-47E8-7686-ABB41A78C927}</Project>
+      <Name>PPv2URPConverters</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rendering.LightTransport.Editor.csproj">
+      <Project>{FBED1CC9-0E20-0C90-F0C7-D2A0FF99FA64}</Project>
+      <Name>Unity.Rendering.LightTransport.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Editor.csproj">
+      <Project>{F0A3ACB2-B4B8-FEDE-4122-CC84203A9B66}</Project>
+      <Name>Unity.RenderPipelines.HighDefinition.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
+      <Project>{3DEE4E79-153A-FDE9-734C-3E996E9F279E}</Project>
+      <Name>Unity.VisualScripting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.csproj">
+      <Project>{5307A1F2-186D-EEB9-3428-88D9A99B125C}</Project>
+      <Name>Unity.RenderPipelines.Universal.Config.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Splines.Editor.csproj">
+      <Project>{5E37B730-0CDE-ECE6-6619-700143BCC201}</Project>
+      <Name>Unity.Splines.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{65785F2C-ED0A-EA93-A245-CECE88950E15}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualEffectGraph.Runtime.csproj">
+      <Project>{70BC1309-902E-1E5B-727F-0073909BA81F}</Project>
+      <Name>Unity.VisualEffectGraph.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.Editor.csproj">
+      <Project>{8158B05B-FE0B-D46C-515D-FF9B3B2277F6}</Project>
+      <Name>Unity.Collections.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualEffectGraph.Editor.csproj">
+      <Project>{D2392DA6-88B6-78DB-0864-BDA85412F22D}</Project>
+      <Name>Unity.VisualEffectGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{3D7B0AC7-B090-0D76-182E-EEA861D0B49A}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
+      <Project>{7DF66C5A-3AB9-6603-EC9E-BDB5DF378B28}</Project>
+      <Name>Unity.VisualScripting.Shared.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
+      <Project>{98BEDC4F-829D-CCB7-2677-67671DBB6416}</Project>
+      <Name>Unity.VisualScripting.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Center.Common.csproj">
+      <Project>{0C095753-83B7-2486-BD60-60E84EE75B63}</Project>
+      <Name>Unity.Multiplayer.Center.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
+      <Project>{0FC8D9C2-92E8-0EBC-7BFD-0958C7A38261}</Project>
+      <Name>Unity.AI.Navigation.Updater</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
+      <Project>{68E46871-67D2-5C0A-6E96-9A58668FCF06}</Project>
+      <Name>Unity.VisualScripting.Flow.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{2D931A3F-22ED-2052-B5F0-7CD14D2C333C}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
+      <Project>{6394ACE5-1052-889E-6C29-76D44BF4F460}</Project>
+      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
       <Project>{5871199E-D2C3-EB93-B715-DCDCA0EFE774}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
@@ -1155,53 +1238,29 @@
       <Project>{870F0BDA-9CDA-2329-809B-2117E4EEF8A7}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{101FC173-6F42-28E0-4BEA-947B634FF26B}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{6394ACE5-1052-889E-6C29-76D44BF4F460}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Runtime.csproj">
+      <Project>{E47E1E54-1DB1-9517-BDC2-D7DE09D01B2E}</Project>
+      <Name>Unity.RenderPipelines.HighDefinition.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{FBCACF1B-E390-CAB0-D0EF-6BE8F4356AE8}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{87BD7C35-209E-87A1-E788-FFEE94344114}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.Shared.csproj">
-      <Project>{2D16E727-AC3A-2656-DA92-4C66CA118D76}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{1E241A10-E8C6-0CC9-390C-E5907A54E47D}</Project>
-      <Name>Unity.PlasticSCM.Editor</Name>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{725EA1A1-CFF0-6059-424C-59D09523D565}</Project>
+      <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
       <Project>{6EFCBB45-EAD0-C47E-7870-C258217FE642}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj">
-      <Project>{7B526E90-9A21-A26A-E804-1106E73FED26}</Project>
-      <Name>Unity.Multiplayer.Center.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{EAA4806D-82BA-FFD6-9005-17BCFE851E19}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{F1ED7D66-AED5-97B9-2C42-1DEDE6095BB9}</Project>
-      <Name>Unity.Mathematics.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
       <Project>{7C594E74-C770-45E2-EB97-F3DA5452267F}</Project>
       <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj">
-      <Project>{961ABAA5-BCA9-7932-C403-5A1E50F146E5}</Project>
-      <Name>Unity.RenderPipelines.GPUDriven.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{CFB3F5E8-B113-59D7-AD13-0AC4E11FFBF2}</Project>
@@ -1210,14 +1269,6 @@
     <ProjectReference Include="Unity.Burst.Editor.csproj">
       <Project>{07E7125B-B47D-59C6-E57F-3FF65835910F}</Project>
       <Name>Unity.Burst.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{429DE10A-5890-B4BA-7CF3-47B9BABFD2BE}</Project>
-      <Name>Unity.Collections</Name>
-    </ProjectReference>
-    <ProjectReference Include="PPv2URPConverters.csproj">
-      <Project>{02D6ACF9-EF02-47E8-7686-ABB41A78C927}</Project>
-      <Name>PPv2URPConverters</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
       <Project>{316F61D7-8F3C-C950-379B-BF40DB1C336B}</Project>
@@ -1231,10 +1282,6 @@
       <Project>{A67DA448-A6BF-8C54-F2F1-32AF62660E73}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Rendering.LightTransport.Editor.csproj">
-      <Project>{FBED1CC9-0E20-0C90-F0C7-D2A0FF99FA64}</Project>
-      <Name>Unity.Rendering.LightTransport.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
       <Project>{B004D59B-C656-B673-6CAC-F9093B0A1966}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
@@ -1243,13 +1290,13 @@
       <Project>{0FBB3D6A-3EFB-18F5-299B-3994B855766B}</Project>
       <Name>Unity.Rendering.LightTransport.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{3DEE4E79-153A-FDE9-734C-3E996E9F279E}</Project>
-      <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
       <Project>{8DB9E86C-56A3-B5F2-475B-17A7A33B86F2}</Project>
       <Name>Unity.InputSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.csproj">
+      <Project>{69D618F9-A5CE-2FAD-7BA8-02FF724A5C12}</Project>
+      <Name>Unity.RenderPipelines.Universal.2D.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
